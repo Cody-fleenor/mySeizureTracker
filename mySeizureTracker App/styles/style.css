@@ -53,6 +53,32 @@
     -ms-transform: translateX(26px);
     transform: translateX(26px);
   }
+.settingsUl{
+  background-color: #ccc;
+  color: #000000;
+  margin: auto;
+  width: auto;
+  padding: 5px;
+}
+.settingLI{
+  background-color: #333;
+  color: white;
+  padding: 28px 32px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+  
+}
+.settingLI p{
+  float: left;
+  width: 80%;
+  margin: auto;
+  padding-right: 20px;
+}
+.settingLI div switch{
+  float: right;
+  margin: auto;
+}
 
 
 /* Style the navigation menu 

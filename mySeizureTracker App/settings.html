@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="./styles/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="./styles/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/25f530d2d8.js" crossorigin="anonymous"></script>
+    <title>mySeizure Tracker</title>
+</head>
+<header>
+  <div class="topnav">
+    <a href="index.html" class="active"> 
+      <i class="fas fa-brain"></i> my<span class="text-light">Seizure</span> Tracker</a>
+    <div id="myLinks">
+      <a href="log.html"> Seizure Log</a>
+      <a href="settings.html">Settings</a>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="displayNavBar()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</header>
+<body>
+  <div class="container">
+    <h3>
+      Settings
+    </h3>
+    <ul class="settingUl">
+      <div class="testLI">
+        <li class="settingLI">
+          <div class="testLI">
+            <p><i class="fas fa-moon"></i>  Change to Dark Mode:</p>
+              <div class="switch">
+                <label class="switch">
+                  <input type="checkbox" id="toggleSwitch"></input>
+                  <span class="slider"></span>
+                </label>
+              </div>  
+            </div>
+        </li>
+      </div>
+        <li class="settingLI">
+          <div class="testLI">
+            <p>Download Seizure Logs in PDF</p>
+            <form>
+              <button class="btn btn-primary" onclick="printLog()">Seizure Logs</button>
+           </form>
+            </div>
+        </li>
+        <li class="settingLI">
+          <p>Delete All Logs (this can't be undone)</p>
+          <div>
+              <button class="btn btn-danger" onclick="deleteLogs()">Delete Seizure Logs</button>
+          </div>
+        </li>
+    </ul>
+  </div>
+</body>
+<script src="darkmodetoggle.js"></script>
+<script src="navBar.js"></script>
+</html>
