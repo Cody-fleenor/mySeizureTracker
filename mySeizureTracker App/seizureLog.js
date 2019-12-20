@@ -1,3 +1,4 @@
+
 // seizureLog Class: Represents a seizureLog
 class SeizureLog {
     constructor(dateOfSeizure, durationOfSeizure, notesFromSeizure) {
@@ -46,17 +47,6 @@ static clearFields() {
   document.querySelector('#durationOfSeizure').value = '';
   document.querySelector('#notesFromSeizure').value = '';
 }
-}
-
-/*Burger Menu*/
-/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
-function displayNavBar() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
 }
 
   // Store Class: Handles Storage
@@ -123,33 +113,11 @@ function displayNavBar() {
 
 // Event: Remove a seizureLog
 document.querySelector('#seizureLog-list').addEventListener('click', (e) => {
-  // Remove seizureLog from UI
-  UI.deleteSeizureLog(e.target);
+// Remove seizureLog from UI
+UI.deleteSeizureLog(e.target);
 
-  // Remove seizureLog from store
-  Store.removeSeizureLog(e.target.parentElement.previousElementSibling.textContent);
-  // Show success message
-  UI.showAlert('seizureLog Removed', 'success');
+// Remove seizureLog from store
+Store.removeSeizureLog(e.target.parentElement.previousElementSibling.textContent);
+// Show success message
+UI.showAlert('seizureLog Removed', 'success');
 });
-
-/*dark mode*/
-document.getElementById('toggleSwitch1').addEventListener('click', toggleMode);
-function toggleMode(cssFile, cssLinkIndex) {
-     var checkBox = document.getElementById("toggleSwitch")
-     var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
-     var newlink = document.createElement("link");
-     
-     if (checkBox.checked == true){
-     newlink.setAttribute("rel","stylesheet");
-     newlink.setAttribute("type","text/css");
-     newlink.setAttribute("href","./styles/white-theme.css");
-     document.getElementsByTagName("head").item(0).replaceChild(newlink,oldlink);
-     } else {
-     newlink.setAttribute("rel","stylesheet");
-     newlink.setAttribute("type","text/css");
-     newlink.setAttribute("href","./styles/bootstrap.css");
-     document.getElementsByTagName("head").item(0).replaceChild(newlink,oldlink);
-     }
-   }
-
-
