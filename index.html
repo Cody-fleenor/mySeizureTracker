@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="./styles/white-theme.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/25f530d2d8.js" crossorigin="anonymous"></script>
+    <title>mySeizure Tracker</title>
+</head>
+<header>
+  <div class="topnav">
+    <a href="index.html" class="active"> 
+      <i class="fas fa-brain"></i> my<span class="text-light">Seizure</span> Tracker</a>
+    <div id="myLinks">
+      <a href="log.html"> Seizure Log</a>
+      <a href="settings.html">Settings</a>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="displayNavBar()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+</header>
+<body>
+    <div id="formS" class="container mt-4">
+          <form id="seizureLog-form">
+            <div class="form-group">
+              <label for="dateOfSeizure">Date of Seizure</label>
+              <input type="date" id="dateOfSeizure" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="durationOfSeizure">How long did it last?</label>
+              <input type="text" id="durationOfSeizure" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="notesFromSeizure">Notes</label>
+              <input type="text" id="notesFromSeizure" class="form-control">
+            </div>
+            <input type="submit" value="Add SeizureLog" class="btn btn-primary btn-block">
+          </form>
+          <table class="table table-striped mt-5">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Length</th>
+                <th>Notes</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="seizureLog-list"></tbody>
+          </table>
+      </div> 
+    <script src="app.js"></script>
+</body>
+</html>
